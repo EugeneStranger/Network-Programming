@@ -57,7 +57,7 @@ BOOL CALLBACK DlgProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 				SendMessage(hEditPrefix, WM_GETTEXT, SIZE, (LPARAM)sz_prefix);
 				DWORD dw_prefix = atoi(sz_prefix);
 				DWORD dw_mask = UINT_MAX;
-				dw_mask >>= (32 - dw_prefix);
+				//dw_mask >>= (32 - dw_prefix);
 				dw_mask <<= (32 - dw_prefix);
 				SendMessage(hIPmask, IPM_SETADDRESS, 0, dw_mask);
 			}
